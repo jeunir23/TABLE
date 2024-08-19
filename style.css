@@ -13,4 +13,5 @@
 .table thead tr {
   background-color: rgba(244, 247, 252, 0.75);
   text-align: left;
+  font-weight: bold;
 }
