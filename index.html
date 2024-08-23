@@ -10,24 +10,21 @@
     </style>
   </head>
   <body>
+    <input
+      type="text"
+      class="search-input"
+      placeholder="Search Name..."
+      id="search-input"
+    />
     <table class="table" id="myTable">
-      <div class="topNav">
-        <thead>
-          <th>
-            <input
-              type="text"
-              class="search-input"
-              placeholder="Search Name..."
-            />
-          </th>
-          <tr>
-            <th>Name</th>
-            <th class="topnav">Birthdate</th>
-            <th class="topnav">Age</th>
-            <th>Contact Number</th>
-          </tr>
-        </thead>
-      </div>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Birthdate</th>
+          <th>Age</th>
+          <th>Contact Number</th>
+        </tr>
+      </thead>
       <tbody>
         <tr>
           <td>Emily Johnson</td>
@@ -90,7 +87,7 @@
           <td>+1-202-555-0131</td>
         </tr>
       </tbody>
-      <script src="script.js"></script>
     </table>
+    <script src="script.js"></script>
   </body>
 </html>

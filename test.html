@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyup Event Listener Example</title>
+    <style>
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        padding: 8px;
+        border: 1px solid #ddd;
+        margin-top: -1px;
+        background-color: #f6f6f6;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Searchable List</h2>
+    <input type="text" id="searchInput" placeholder="Search for items..." />
+    <ul id="itemList">
+      <li>Apple</li>
+      <li>Banana</li>
+      <li>Cherry</li>
+      <li>Date</li>
+      <li>Elderberry</li>
+      <li>Fig</li>
+      <li>Grape</li>
+    </ul>
+
+    <script>
+      // Select the input field
+      const searchInput = document.getElementById("searchInput");
+
+      // Add an event listener for the keyup event
+      searchInput.addEventListener("keyup", function () {
+        // Get the input value and convert it to lowercase
+        const filter = this.value.toLowerCase();
+
+        // Get all list items
+        const items = document.querySelectorAll("#itemList li");
+
+        // Loop through all list items and hide those that don't match the search query
+        items.forEach(function (item) {
+          // Get the text content of the current item and convert it to lowercase
+          const text = item.textContent.toLowerCase();
+
+          // Check if the text includes the filter string
+          if (text.indexOf(filter) > -1) {
+            item.style.display = "";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

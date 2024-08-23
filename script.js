@@ -1,3 +1,3 @@
 "use strict";
-
-const search = document.querySelectorAll("search-input");
+const searchInput = document.querySelector(".search-input");
+const rows = document.querySelectorAll("tbody tr");
