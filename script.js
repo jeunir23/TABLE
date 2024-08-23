@@ -6,6 +6,12 @@ searchInput.addEventListener("keyup", function () {
   const filter = this.value.toLowerCase();
 
   rows.forEach((row) => {
-    text = row.textContent.toLowerCase();
+    const text = row.textContent.toLowerCase();
+
+    if (text.indexOf(filter) > -1) {
+      row.classList.remove("hide");
+    } else {
+      row.classList.add("hide");
+    }
   });
 });
